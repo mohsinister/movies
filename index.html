@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mohsin Movies Data</title>
+    <link href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css" rel="stylesheet">
+    
+  </head>
+
+  <body style="font-family: Calibri, sans-serif">
+  <table id="mainTable" class="display" cellspacing="0" width="100%">
+
+        <thead>
+            <tr>
+		<th>Sr.</th>
+                <th>Name</th>
+                <th>Year</th>
+                <th>Duration</th>
+                <th>Rating</th>
+                <th>Meta</th>
+                <th>Plot</th>
+                <th>Genre</th>
+                <th>Actors</th>
+		<th>Watched</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+		<th>Sr.</th>
+                <th>Name</th>
+                <th>Year</th>
+                <th>Duration</th>
+                <th>Rating</th>
+                <th>Meta</th>
+                <th>Plot</th>
+                <th>Genre</th>
+                <th>Actors</th>
+		<th>Watched</th>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('#mainTable').DataTable( {
+            "ajax": 'content.json'
+        } );
+    } );
+    </script>
+ </body>
+</html>
